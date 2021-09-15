@@ -10,6 +10,7 @@ public class Features {
 		System.out.print("Enter 0 for Int-To-String ");
 		int i = in.nextInt();
 		if (i == 0){
+				
 			System.out.print("Welcome to Int-To-String. Please enter any value from 0 to 2: ");
 			int j = in.nextInt();
 			if (j == 0) {
@@ -27,6 +28,10 @@ public class Features {
 			else {
 				System.out.println("Invalid");
 			}
+			
+			
+		} else {
+			System.out.println("Program Terminated.");
 		}
 		
 		in.close();
