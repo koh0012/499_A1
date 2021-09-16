@@ -30,6 +30,7 @@ public class Requests implements Iterable<Customer> {
 		add(new Customer(name,loy));
 	}
 	
+	//add feature 
 	public void add(Customer c) {
 
 		if (c.getLoyalty() == -1) return;
@@ -90,7 +91,22 @@ public class Requests implements Iterable<Customer> {
 					return c;
 				}
 			}
-			////
+			//remove feature
+			@Override
+			public void remove() {
+
+				index--;
+				
+				if (index < platinum.size()) platinum.remove(c); 
+				
+				else if (index < (platinum.size() + gold.size())) gold.remove(c);
+					
+				else if (index < (platinum.size() + gold.size() + silver.size())) silver.remove(c);
+
+				else  bronze.remove(c);
+				
+				size--;				
+			}
 		};
 		return itr;
 	}
