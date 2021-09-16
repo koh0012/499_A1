@@ -30,6 +30,7 @@ public class Requests implements Iterable<Customer> {
 		add(new Customer(name,loy));
 	}
 	
+	//add feature 
 	public void add(Customer c) {
 
 		if (c.getLoyalty() == -1) return;
@@ -90,6 +91,7 @@ public class Requests implements Iterable<Customer> {
 					return c;
 				}
 			}
+			//remove feature
 			@Override
 			public void remove() {
 
