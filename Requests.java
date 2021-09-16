@@ -90,7 +90,21 @@ public class Requests implements Iterable<Customer> {
 					return c;
 				}
 			}
-			////
+			@Override
+			public void remove() {
+
+				index--;
+				
+				if (index < platinum.size()) platinum.remove(c); 
+				
+				else if (index < (platinum.size() + gold.size())) gold.remove(c);
+					
+				else if (index < (platinum.size() + gold.size() + silver.size())) silver.remove(c);
+
+				else  bronze.remove(c);
+				
+				size--;				
+			}
 		};
 		return itr;
 	}
