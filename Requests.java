@@ -14,7 +14,49 @@ public class Requests implements Iterable<Customer> {
 	private LinkedList<Customer> silver = new LinkedList<Customer>();
 	private LinkedList<Customer> bronze = new LinkedList<Customer>();
 	
-	//
+	public Requests() {
+		size = 0;
+
+		reqs = new ArrayList<LinkedList<Customer>>();
+		
+		reqs.add(platinum); 
+
+		reqs.add(gold);
+		reqs.add(silver);
+		reqs.add(bronze); 
+	}
+
+	public void add(String name, int loy) {
+		
+		add(new Customer(name,loy));
+	}
+	
+	public void add(Customer c) {
+
+		if (c.getLoyalty() == -1) return;
+
+		else if (c.getLoyalty() == 0) {
+			platinum.add(c); 
+			reqs.add(0, platinum);
+			size++;
+		}
+		else if (c.getLoyalty() == 1) {
+			gold.add(c);
+			reqs.add(1, gold);
+			size++;
+		}
+		else if (c.getLoyalty() == 2) {
+			silver.add(c); 
+			reqs.add(2, silver);
+			size++;
+		}
+		else if (c.getLoyalty() == 3) {
+			bronze.add(c);
+			reqs.add(3, bronze);
+			size++;
+		}
+	}
+	
 	
 	@Override
 	public Iterator<Customer> iterator() {
