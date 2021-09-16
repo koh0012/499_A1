@@ -20,7 +20,6 @@ public class Requests implements Iterable<Customer> {
 		reqs = new ArrayList<LinkedList<Customer>>();
 		
 		reqs.add(platinum); 
-
 		reqs.add(gold);
 		reqs.add(silver);
 		reqs.add(bronze); 
@@ -91,7 +90,7 @@ public class Requests implements Iterable<Customer> {
 					return c;
 				}
 			}
-			//
+			////
 		};
 		return itr;
 	}
