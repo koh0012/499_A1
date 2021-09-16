@@ -43,7 +43,6 @@ public class Test {
 	@org.junit.Test
 	public void test2() {
 		System.out.print("Test 2: ");
-	//TODO: Test if it works if there are no customers in Platinum
 		r.add("Jenny",1);
 		r.add("Julie",2);
 		r.add("Val",3);
@@ -104,7 +103,6 @@ public class Test {
 		System.out.println("Check");
 	}
 
-	// test if removal works
 	@org.junit.Test
 	public void test6() {
 		System.out.print("Test 6: ");
@@ -138,5 +136,7 @@ public class Test {
 		assertEquals(i.next().getName(),"Val");
 		System.out.print("Check");
 	}
+	
+	//Test successful!
 	
 }
